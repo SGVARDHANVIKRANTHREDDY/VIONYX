@@ -42,7 +42,7 @@ export function TestimonialsSection() {
                   {item.name.charAt(0)}
                 </div>
                 <div>
-                  <Heading as="h4" className="text-sm font-semibold">
+                  <Heading as="h3" size="h6" className="text-sm font-semibold">
                     {item.name}
                   </Heading>
                   <p className="text-xs text-text-muted">

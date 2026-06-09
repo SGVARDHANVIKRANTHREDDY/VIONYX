@@ -147,7 +147,6 @@ export function PortfolioSection() {
                       href={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      aria-label={`Open case study for ${project.title} in a new tab`}
                     >
                       <span>Explore Live Platform</span>
                       <ExternalLink className="w-3.5 h-3.5 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform duration-300" />
