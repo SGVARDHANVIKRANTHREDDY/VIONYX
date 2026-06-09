@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Poppins, JetBrains_Mono } from "next/font/google";
+import { Inter, Poppins } from "next/font/google";
 import { PageBackground } from "@/components/layout/PageBackground";
 import { businessConfig } from "@/config/business";
 import "./globals.css";
@@ -17,12 +17,6 @@ const poppins = Poppins({
   display: "swap",
 });
 
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
-  variable: "--font-jetbrains-mono",
-  display: "swap",
-});
-
 export const metadata: Metadata = {
   title: `${businessConfig.name} - ${businessConfig.tagline}`,
   description: `${businessConfig.name} designs and engineers production-grade digital experiences for growing local businesses.`,
@@ -36,7 +30,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${poppins.variable} ${jetbrainsMono.variable}`}
+      className={`${inter.variable} ${poppins.variable}`}
     >
       <body className="antialiased">
         <a

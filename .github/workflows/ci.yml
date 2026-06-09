@@ -33,10 +33,13 @@ jobs:
       - name: Lint
         run: npm run lint
 
+      - name: Type check
+        run: npx tsc --noEmit
+
       - name: Build
         run: npm run build
 
-      - name: E2E
+      - name: Playwright smoke tests
         run: npm run test:e2e -- --project=chromium
 
       - name: Lighthouse CI

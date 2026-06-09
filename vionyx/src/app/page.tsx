@@ -1,4 +1,3 @@
-import React from "react";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { ScrollProgress } from "@/components/layout/scroll-progress";
@@ -10,15 +9,9 @@ import { TrustBar } from "@/sections/trust-bar";
 import { AboutSection } from "@/sections/about-section";
 import { ServicesSection } from "@/sections/services-section";
 import { IndustriesSection } from "@/sections/industries-section";
-
-// Phase 4 Sections
-import { PortfolioSection } from "@/sections/portfolio-section";
-import { ProcessSection } from "@/sections/process-section";
-import { PricingSection } from "@/sections/pricing-section";
-import { TestimonialsSection } from "@/sections/testimonials-section";
-import { FAQSection } from "@/sections/faq-section";
 import { CTASection } from "@/sections/cta-section";
 import { ContactSection } from "@/sections/contact-section";
+import { DeferredHomeSections } from "@/components/layout/deferred-home-sections";
 
 import { constructMetadata } from "@/lib/seo";
 import { getBreadcrumbSchema, getLocalBusinessSchema, getOrganizationSchema, getWebsiteSchema } from "@/lib/structured-data";
@@ -61,11 +54,7 @@ export default function Home() {
         <AboutSection />
         <ServicesSection />
         <IndustriesSection />
-        <PortfolioSection />
-        <ProcessSection />
-        <PricingSection />
-        <TestimonialsSection />
-        <FAQSection />
+        <DeferredHomeSections />
         <CTASection />
         <ContactSection />
       </main>
