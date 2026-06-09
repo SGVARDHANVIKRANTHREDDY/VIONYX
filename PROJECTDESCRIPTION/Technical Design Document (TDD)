@@ -1,0 +1,984 @@
+# MASTER SPECIFICATION DOCUMENT
+
+# Chapter 9 — Technical Design Document (TDD)
+
+## Project
+
+LaunchForge Digital Agency Website
+
+Version: 1.0
+
+Architecture: Feature-Based Modular Enterprise Frontend
+
+Deployment Target: Vercel
+
+Rendering Strategy: Server Components + Client Components (Next.js App Router)
+
+Status: Approved for Development
+
+---
+
+# 1. Technical Vision
+
+The codebase must be:
+
+* Modular
+* AI-friendly
+* Reusable
+* Scalable
+* Maintainable
+* SEO optimized
+* Fast
+* Accessible
+* Production-ready
+
+The architecture should allow cloning the project and creating a new client website in less than two hours by changing only configuration and content.
+
+---
+
+# 2. Core Technology Stack
+
+## Framework
+
+Next.js 15
+
+App Router
+
+React Server Components
+
+---
+
+## Language
+
+TypeScript
+
+Strict Mode enabled
+
+---
+
+## Styling
+
+Tailwind CSS
+
+CSS Variables
+
+Design Tokens
+
+Tailwind Config Extension
+
+---
+
+## Animation
+
+Framer Motion
+
+GSAP
+
+Motion One (optional)
+
+---
+
+## Icons
+
+Lucide React
+
+---
+
+## Forms
+
+React Hook Form
+
+Zod Validation
+
+---
+
+## Email
+
+Resend
+
+Fallback:
+
+EmailJS
+
+---
+
+## Deployment
+
+Vercel
+
+---
+
+## Analytics
+
+Google Analytics
+
+Microsoft Clarity
+
+Vercel Analytics
+
+---
+
+## Monitoring
+
+Sentry (future)
+
+---
+
+## Image Optimization
+
+Next Image
+
+WebP
+
+AVIF
+
+Lazy Loading
+
+---
+
+# 3. Architecture Pattern
+
+Feature-Based Modular Architecture
+
+```
+Application
+
+↓
+
+App Router
+
+↓
+
+Layout
+
+↓
+
+Sections
+
+↓
+
+Components
+
+↓
+
+UI Primitives
+
+↓
+
+Design Tokens
+
+↓
+
+Utilities
+
+↓
+
+Configuration
+
+↓
+
+Assets
+```
+
+Business logic must never exist inside UI components.
+
+---
+
+# 4. Folder Structure
+
+```
+src/
+
+│
+
+├── app/
+
+│ ├── layout.tsx
+
+│ ├── page.tsx
+
+│ ├── services/
+
+│ ├── portfolio/
+
+│ ├── contact/
+
+│ ├── pricing/
+
+│ └── api/
+
+│
+
+├── components/
+
+│ ├── ui/
+
+│ ├── layout/
+
+│ ├── common/
+
+│ ├── navigation/
+
+│ ├── footer/
+
+│ └── animations/
+
+│
+
+├── sections/
+
+│ ├── hero/
+
+│ ├── about/
+
+│ ├── services/
+
+│ ├── industries/
+
+│ ├── portfolio/
+
+│ ├── pricing/
+
+│ ├── faq/
+
+│ ├── testimonials/
+
+│ └── contact/
+
+│
+
+├── config/
+
+│ ├── site.ts
+
+│ ├── services.ts
+
+│ ├── pricing.ts
+
+│ ├── navigation.ts
+
+│ └── seo.ts
+
+│
+
+├── content/
+
+│ ├── hero.ts
+
+│ ├── about.ts
+
+│ ├── faq.ts
+
+│ ├── testimonials.ts
+
+│ └── industries.ts
+
+│
+
+├── hooks/
+
+│
+
+├── lib/
+
+│
+
+├── utils/
+
+│
+
+├── types/
+
+│
+
+├── constants/
+
+│
+
+├── styles/
+
+│
+
+├── assets/
+
+│
+
+└── public/
+```
+
+---
+
+# 5. Component Hierarchy
+
+```
+App
+
+↓
+
+RootLayout
+
+↓
+
+Navbar
+
+↓
+
+Hero
+
+↓
+
+TrustBar
+
+↓
+
+About
+
+↓
+
+Services
+
+↓
+
+Industries
+
+↓
+
+Portfolio
+
+↓
+
+Process
+
+↓
+
+Pricing
+
+↓
+
+Testimonials
+
+↓
+
+FAQ
+
+↓
+
+Contact
+
+↓
+
+Footer
+```
+
+Each section exists independently.
+
+No section depends on another.
+
+---
+
+# 6. Component Design Rules
+
+Every component must have:
+
+* Single responsibility
+* Typed props
+* Reusability
+* Accessibility
+* Responsive behavior
+* Loading state (if applicable)
+* Error handling (if applicable)
+
+No component should exceed 300 lines.
+
+Extract logic into hooks when complexity grows.
+
+---
+
+# 7. UI Primitive Library
+
+Create reusable primitives:
+
+Button
+
+Input
+
+Textarea
+
+Badge
+
+Card
+
+Section
+
+Heading
+
+Container
+
+IconButton
+
+Modal
+
+Dialog
+
+Tooltip
+
+Accordion
+
+Tabs
+
+Chip
+
+Avatar
+
+Spinner
+
+Skeleton
+
+Divider
+
+Tag
+
+Toast
+
+ProgressBar
+
+Every higher-level component must compose these primitives.
+
+---
+
+# 8. Content Strategy
+
+Never hardcode business text inside components.
+
+Store all content in dedicated files.
+
+Example:
+
+hero.ts
+
+services.ts
+
+pricing.ts
+
+faq.ts
+
+testimonials.ts
+
+Changing content should never require editing JSX.
+
+---
+
+# 9. Configuration Strategy
+
+All configurable values belong in config/.
+
+Examples:
+
+Business Name
+
+Phone
+
+Email
+
+Address
+
+Social Links
+
+WhatsApp Number
+
+Pricing
+
+Navigation
+
+SEO
+
+Theme
+
+This enables rapid reuse for future client projects.
+
+---
+
+# 10. State Management
+
+Use local state by default.
+
+React Context only for:
+
+Theme
+
+Global UI
+
+Modal
+
+Navigation
+
+Avoid Redux or Zustand for this project.
+
+Keep the architecture lightweight.
+
+---
+
+# 11. Form Architecture
+
+Contact Form
+
+↓
+
+Validation
+
+↓
+
+Sanitization
+
+↓
+
+API Route
+
+↓
+
+Email Provider
+
+↓
+
+Success Response
+
+↓
+
+Toast Notification
+
+↓
+
+Analytics Event
+
+Validation must occur on both client and server.
+
+---
+
+# 12. API Architecture
+
+/api/contact
+
+/api/quote
+
+/api/newsletter
+
+Return format:
+
+```
+{
+success:true,
+message:"",
+data:{}
+}
+```
+
+Consistent response structure across all endpoints.
+
+---
+
+# 13. Environment Variables
+
+```
+NEXT_PUBLIC_SITE_URL
+
+NEXT_PUBLIC_WHATSAPP
+
+NEXT_PUBLIC_GA_ID
+
+RESEND_API_KEY
+
+CONTACT_EMAIL
+```
+
+Never expose secrets to the client.
+
+---
+
+# 14. SEO Architecture
+
+Generate metadata from central config.
+
+Every page automatically receives:
+
+Title
+
+Description
+
+Open Graph
+
+Twitter
+
+Canonical
+
+Structured Data
+
+Robots
+
+Sitemap
+
+No duplicated metadata.
+
+---
+
+# 15. Performance Strategy
+
+Server Components by default.
+
+Client Components only when interaction is required.
+
+Dynamic imports for heavy animations.
+
+Image optimization enabled.
+
+Code splitting.
+
+Lazy loading.
+
+Preload fonts.
+
+Target Lighthouse >95.
+
+---
+
+# 16. Animation Architecture
+
+Animation wrappers isolated.
+
+```
+FadeIn
+
+SlideUp
+
+Reveal
+
+Counter
+
+Parallax
+
+Scale
+
+Stagger
+
+Magnetic
+
+Tilt
+```
+
+Business components never contain animation logic directly.
+
+---
+
+# 17. Design Token Architecture
+
+```
+colors
+
+spacing
+
+radius
+
+shadow
+
+typography
+
+motion
+
+breakpoints
+
+z-index
+```
+
+Every component consumes tokens.
+
+Never use raw pixel values where tokens exist.
+
+---
+
+# 18. Asset Organization
+
+```
+logos/
+
+icons/
+
+portfolio/
+
+services/
+
+hero/
+
+illustrations/
+
+backgrounds/
+
+lottie/
+
+videos/
+```
+
+Assets named consistently.
+
+No duplicate files.
+
+Use optimized formats.
+
+---
+
+# 19. Responsive Strategy
+
+Breakpoints:
+
+Mobile
+
+Tablet
+
+Laptop
+
+Desktop
+
+Ultra-wide
+
+Every component designed mobile-first and enhanced progressively.
+
+---
+
+# 20. Error Boundary Strategy
+
+Global Error Boundary
+
+Section Error Boundary
+
+Image fallback
+
+API fallback
+
+Form fallback
+
+Graceful degradation is mandatory.
+
+---
+
+# 21. Accessibility Strategy
+
+Semantic HTML
+
+ARIA
+
+Keyboard support
+
+Focus management
+
+Reduced motion
+
+Contrast compliance
+
+Screen reader support
+
+Accessibility validated before deployment.
+
+---
+
+# 22. Testing Strategy
+
+Manual testing:
+
+Desktop
+
+Tablet
+
+Mobile
+
+Chrome
+
+Edge
+
+Firefox
+
+Safari
+
+No broken layouts.
+
+No console warnings.
+
+No hydration errors.
+
+No TypeScript errors.
+
+No ESLint errors.
+
+---
+
+# 23. Reusability Strategy
+
+The project must act as a starter kit.
+
+To build a new client website:
+
+* Change branding
+* Replace content files
+* Replace images
+* Update config
+* Deploy
+
+No architectural changes required.
+
+---
+
+# 24. Scalability Roadmap
+
+Future modules:
+
+Blog
+
+CMS
+
+Portfolio Manager
+
+AI Chatbot
+
+Client Dashboard
+
+Admin Dashboard
+
+Knowledge Base
+
+Booking Engine
+
+CRM
+
+Invoices
+
+Payments
+
+Team Profiles
+
+Careers
+
+Localization
+
+These should integrate without restructuring the codebase.
+
+---
+
+# 25. Deployment Pipeline
+
+Developer
+
+↓
+
+GitHub
+
+↓
+
+Preview Deployment
+
+↓
+
+Automated Checks
+
+↓
+
+Production Branch
+
+↓
+
+Vercel Build
+
+↓
+
+CDN Distribution
+
+↓
+
+Live Website
+
+Every commit should produce a preview deployment.
+
+---
+
+# 26. Coding Standards
+
+TypeScript strict mode
+
+ESLint
+
+Prettier
+
+Absolute imports
+
+Semantic naming
+
+No any type
+
+No duplicated logic
+
+Reusable functions
+
+Pure components
+
+Meaningful comments only where necessary
+
+Prefer composition over inheritance.
+
+---
+
+# 27. AI Development Guidelines
+
+Every generated file must:
+
+* Compile without errors
+* Be fully typed
+* Follow existing architecture
+* Reuse primitives
+* Avoid duplicated code
+* Follow design tokens
+* Be responsive
+* Be accessible
+
+AI-generated code should be production quality on first generation whenever possible.
+
+---
+
+# 28. Business Optimization Strategy
+
+The architecture must optimize for:
+
+Rapid development
+
+Rapid maintenance
+
+Rapid cloning
+
+Rapid customization
+
+Rapid deployment
+
+Low technical debt
+
+Long-term scalability
+
+This website should become the foundation template for all future client projects.
+
+---
+
+# 29. Definition of Technical Excellence
+
+The codebase should be understandable by a new developer within one hour.
+
+Replacing branding and content should take less than thirty minutes.
+
+Creating a new industry-specific website should take less than two hours.
+
+Deploying a production build should take less than five minutes.
+
+No architectural decision should slow future business growth.
+
+---
+
+# 30. Final Technical Principle
+
+The LaunchForge Digital architecture is designed to maximize development speed, code quality, maintainability, and business scalability.
+
+It prioritizes modularity over complexity, configuration over duplication, composition over inheritance, and long-term reuse over one-off implementation.
+
+The result should be a premium, enterprise-grade frontend foundation that can power dozens of future client websites with minimal modification while remaining simple enough to build, maintain, and extend rapidly using AI-assisted development workflows.

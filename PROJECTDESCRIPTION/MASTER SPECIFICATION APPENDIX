@@ -1,0 +1,291 @@
+# MASTER SPECIFICATION APPENDIX
+
+# Chapters 5, 6, 10, 11 & 12 (Condensed Edition)
+
+---
+
+# Chapter 5 — Non-Functional Requirements
+
+## Performance
+
+* Lighthouse Performance Score ≥ 95
+* First Contentful Paint < 1.8 seconds
+* Largest Contentful Paint < 2.5 seconds
+* Cumulative Layout Shift < 0.1
+* Optimized images using WebP/AVIF
+* Lazy loading for below-the-fold assets
+* Dynamic imports for non-critical components
+* Minified JavaScript and CSS
+* Font preloading enabled
+
+---
+
+## Security
+
+* HTTPS enforced
+* Environment variables for secrets
+* Server-side validation for all form submissions
+* Input sanitization
+* XSS prevention
+* CSRF protection where applicable
+* Rate limiting on API routes
+* No sensitive data exposed to the client
+
+---
+
+## Accessibility
+
+* WCAG 2.2 AA compliance target
+* Semantic HTML structure
+* Keyboard navigation support
+* ARIA labels for interactive elements
+* Visible focus indicators
+* Screen reader compatibility
+* High color contrast
+* Reduced motion support
+
+---
+
+## Responsiveness
+
+Support:
+
+* Mobile (320px+)
+* Tablet (768px+)
+* Laptop (1024px+)
+* Desktop (1440px+)
+* Ultra-wide displays
+
+No horizontal scrolling or broken layouts.
+
+---
+
+## Maintainability
+
+* Modular components
+* TypeScript strict mode
+* Reusable design tokens
+* Feature-based architecture
+* Clean code standards
+* No duplicated business logic
+
+---
+
+# Chapter 6 — User Personas & Customer Journey
+
+## Primary Persona
+
+**Name:** Rahul Sharma
+
+**Business:** Restaurant Owner
+
+**Goal:** Increase online visibility and customer inquiries.
+
+**Pain Points:**
+
+* No professional website
+* Low online credibility
+* Customers cannot easily find information
+
+**Desired Outcome:**
+
+A modern website that attracts and converts customers.
+
+---
+
+## Secondary Persona
+
+**Name:** Priya Verma
+
+**Business:** Salon Owner
+
+**Goal:** Showcase services and receive appointment inquiries.
+
+---
+
+## Customer Journey
+
+1. Finds LaunchForge through Google or referral
+2. Visits homepage
+3. Reads services and portfolio
+4. Builds trust through process and testimonials
+5. Reviews pricing
+6. Contacts agency via WhatsApp or form
+7. Receives consultation
+8. Becomes a client
+
+Every page should guide users toward the next step with a clear call to action.
+
+---
+
+# Chapter 10 — Database & API Design (MVP)
+
+## Database
+
+No database is required for the initial version.
+
+All business content is stored in structured TypeScript configuration files.
+
+Future migration to PostgreSQL or Supabase should be straightforward.
+
+---
+
+## API Endpoints
+
+### POST /api/contact
+
+Accepts contact form submissions.
+
+Returns:
+
+* Success status
+* Confirmation message
+
+---
+
+### POST /api/quote
+
+Accepts quote requests.
+
+Triggers email notification to the agency.
+
+---
+
+### POST /api/newsletter
+
+Reserved for future newsletter functionality.
+
+---
+
+## Data Validation
+
+* Required field checks
+* Email format validation
+* Phone format validation
+* Spam protection
+* Server-side validation before processing
+
+---
+
+# Chapter 11 — SEO & Marketing Strategy
+
+## SEO
+
+* Semantic HTML
+* XML sitemap
+* robots.txt
+* Canonical URLs
+* Open Graph metadata
+* Twitter Card metadata
+* JSON-LD Local Business schema
+* Optimized page titles and descriptions
+* Proper heading hierarchy
+* Optimized image alt text
+
+---
+
+## Local SEO
+
+* Google Business Profile integration
+* Consistent business information
+* Location-focused keywords
+* Business contact details on every page
+
+---
+
+## Conversion Strategy
+
+Primary CTA:
+
+**Book a Free Consultation**
+
+Secondary CTA:
+
+**Chat on WhatsApp**
+
+Each major section should include a conversion opportunity.
+
+---
+
+## Content Marketing (Future)
+
+* Blog
+* Case studies
+* Client success stories
+* Website design tips
+* SEO guides
+* Local business growth resources
+
+---
+
+# Chapter 12 — Deployment, Analytics & Maintenance
+
+## Deployment
+
+Platform:
+
+Vercel
+
+Workflow:
+
+GitHub → Vercel Preview → Production Deployment
+
+Automatic deployments enabled.
+
+---
+
+## Analytics
+
+Implement:
+
+* Google Analytics 4
+* Microsoft Clarity
+* Vercel Analytics
+
+Track:
+
+* Page views
+* Scroll depth
+* CTA clicks
+* Contact form submissions
+* WhatsApp clicks
+* Traffic sources
+
+---
+
+## Maintenance
+
+Monthly tasks:
+
+* Dependency updates
+* Security checks
+* Performance review
+* SEO audit
+* Backup verification
+* Broken link checks
+
+---
+
+## Monitoring
+
+Target uptime:
+
+99.9%
+
+Monitor:
+
+* Build failures
+* Form submission failures
+* Performance degradation
+* Broken pages
+* Console errors
+
+---
+
+# MVP Completion Statement
+
+The LaunchForge Digital website is designed as a premium, modular, and scalable agency platform focused on helping local businesses establish a strong online presence.
+
+The architecture prioritizes rapid development, maintainability, SEO, performance, accessibility, and conversion optimization while remaining flexible enough to support future expansion into AI services, SaaS products, client portals, and enterprise solutions without major architectural changes.
+
+This condensed appendix provides sufficient guidance for building and deploying the initial production-ready version while leaving room for iterative enhancement as the business grows.

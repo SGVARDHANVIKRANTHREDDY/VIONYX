@@ -1,0 +1,859 @@
+# MASTER SPECIFICATION DOCUMENT
+
+# Chapter 7 — Complete UI/UX Specification
+
+## Project
+
+LaunchForge Digital Agency Website
+
+Version 1.0
+
+Design Language: Premium SaaS / Enterprise / Modern Digital Agency
+
+---
+
+# 1. Design Philosophy
+
+The website must feel like a product created by a top-tier design agency rather than a traditional service company.
+
+The visual language should communicate:
+
+* Premium quality
+* Simplicity
+* Trust
+* Technical excellence
+* Innovation
+* Precision
+* Modern engineering
+* Business confidence
+
+Every section should have a clear purpose and guide the visitor naturally toward requesting a consultation.
+
+The overall experience should feel immersive, refined, and intentionally minimalist.
+
+---
+
+# 2. Design Inspiration
+
+Visual inspiration should combine characteristics from:
+
+* Apple
+* Stripe
+* Linear
+* Framer
+* Vercel
+* Webflow
+* Notion
+* Raycast
+
+The design must not copy these brands directly but should adopt similar principles:
+
+* Large whitespace
+* Elegant typography
+* Minimal interface chrome
+* Smooth motion
+* High contrast
+* Premium interactions
+* Clean information hierarchy
+
+---
+
+# 3. Visual Identity
+
+Overall appearance:
+
+Modern
+
+Dark-first
+
+Minimal
+
+Luxury
+
+Technical
+
+Elegant
+
+Future-ready
+
+No excessive decorations.
+
+No unnecessary illustrations.
+
+No clutter.
+
+Every pixel should have purpose.
+
+---
+
+# 4. Layout System
+
+Maximum content width:
+
+1440px
+
+Reading width:
+
+720px
+
+Content container:
+
+1280px
+
+Section padding:
+
+Desktop:
+
+160px top
+
+160px bottom
+
+Tablet:
+
+120px
+
+Mobile:
+
+80px
+
+Grid:
+
+12-column responsive grid
+
+Gutters:
+
+32px desktop
+
+24px tablet
+
+16px mobile
+
+---
+
+# 5. Spacing System
+
+Base unit:
+
+8px
+
+Scale:
+
+8
+
+16
+
+24
+
+32
+
+48
+
+64
+
+80
+
+96
+
+128
+
+160
+
+Whitespace should dominate the interface.
+
+Avoid crowded layouts.
+
+---
+
+# 6. Color System
+
+Background
+
+#020617
+
+Surface
+
+#0F172A
+
+Card
+
+rgba(255,255,255,0.05)
+
+Primary
+
+#2563EB
+
+Secondary
+
+#38BDF8
+
+Accent Glow
+
+#60A5FA
+
+Success
+
+#22C55E
+
+Warning
+
+#F59E0B
+
+Danger
+
+#EF4444
+
+Text Primary
+
+#FFFFFF
+
+Text Secondary
+
+#CBD5E1
+
+Muted
+
+#94A3B8
+
+Borders
+
+rgba(255,255,255,0.08)
+
+---
+
+# 7. Gradient System
+
+Primary Gradient
+
+Blue → Cyan
+
+Secondary Gradient
+
+Indigo → Blue
+
+Hero Glow
+
+Radial blue blur
+
+Button Gradient
+
+Left to right
+
+Glass reflection gradient
+
+Animated gradient movement allowed.
+
+---
+
+# 8. Typography
+
+Heading Font
+
+Poppins ExtraBold
+
+Body Font
+
+Inter
+
+Mono Font
+
+JetBrains Mono
+
+Hero:
+
+72px
+
+H1:
+
+64px
+
+H2:
+
+48px
+
+H3:
+
+36px
+
+H4:
+
+28px
+
+Body:
+
+18px
+
+Small:
+
+16px
+
+Caption:
+
+14px
+
+Buttons:
+
+16px
+
+Line height:
+
+150%
+
+Letter spacing:
+
+Slightly reduced for headings.
+
+---
+
+# 9. Border Radius
+
+Buttons
+
+16px
+
+Cards
+
+24px
+
+Input
+
+16px
+
+Large containers
+
+32px
+
+Pills
+
+999px
+
+Consistent across entire website.
+
+---
+
+# 10. Shadows
+
+Soft shadows only.
+
+No harsh shadows.
+
+Glass shadow
+
+Glow shadow
+
+Hover shadow
+
+Elevation shadow
+
+Use multiple layered shadows.
+
+---
+
+# 11. Glassmorphism
+
+Cards:
+
+Background blur
+
+12px
+
+Transparency
+
+10%
+
+Border
+
+1px white opacity
+
+Reflection overlay
+
+Soft glow
+
+Used for:
+
+Service cards
+
+Pricing
+
+Statistics
+
+Floating elements
+
+Portfolio
+
+Testimonials
+
+---
+
+# 12. Hero Section
+
+Height:
+
+100vh
+
+Headline occupies left 60%.
+
+Visual occupies right 40%.
+
+Left side:
+
+Headline
+
+Subheadline
+
+Buttons
+
+Statistics
+
+Right side:
+
+Floating laptop
+
+Animated browser window
+
+Floating service cards
+
+Floating notification badges
+
+Animated cursor
+
+Scrolling code snippets
+
+Background:
+
+Grid
+
+Particles
+
+Gradient glow
+
+Blur circles
+
+Noise texture
+
+Hero should immediately communicate professionalism.
+
+---
+
+# 13. Navigation
+
+Sticky
+
+Transparent
+
+Glass blur
+
+Logo left
+
+Links center
+
+CTA right
+
+Scroll effect:
+
+Background opacity increases
+
+Shadow appears
+
+Height reduces
+
+Mobile:
+
+Animated drawer
+
+Blur overlay
+
+Slide animation
+
+---
+
+# 14. Buttons
+
+Primary:
+
+Gradient
+
+Glow
+
+Hover lift
+
+Scale
+
+Shadow
+
+Ripple effect
+
+Secondary:
+
+Glass
+
+Border
+
+Hover fill
+
+Ghost:
+
+Minimal
+
+Underline animation
+
+Magnetic hover interaction preferred.
+
+---
+
+# 15. Cards
+
+Hover:
+
+Lift
+
+Glow
+
+Scale 1.02
+
+Border animation
+
+Background animation
+
+Tilt interaction
+
+Cards must feel alive.
+
+---
+
+# 16. Scroll Behavior
+
+Smooth scrolling
+
+Momentum
+
+Scroll progress
+
+Parallax backgrounds
+
+Section reveal
+
+Content fade
+
+Image scale
+
+Counter animation
+
+Sticky transitions
+
+No abrupt changes.
+
+---
+
+# 17. Motion Design
+
+Animation duration:
+
+200ms
+
+300ms
+
+500ms
+
+800ms
+
+Easing:
+
+easeOutExpo
+
+Spring animations preferred.
+
+Avoid linear transitions.
+
+Motion should communicate quality.
+
+---
+
+# 18. Mouse Interactions
+
+Cursor blob
+
+Magnetic buttons
+
+Image tilt
+
+Card tilt
+
+Hover glow
+
+Gradient follow
+
+Cursor trails (subtle)
+
+Desktop only.
+
+---
+
+# 19. Portfolio Gallery
+
+Masonry layout
+
+Hover zoom
+
+Blur overlay
+
+Technology badges
+
+Category
+
+CTA
+
+Fullscreen preview
+
+Smooth transition
+
+Future filtering support.
+
+---
+
+# 20. Pricing Section
+
+Three floating glass cards.
+
+Center card elevated.
+
+Glow animation.
+
+Hover expansion.
+
+Animated border.
+
+Feature comparison.
+
+Premium badge.
+
+CTA emphasized.
+
+---
+
+# 21. Testimonial Section
+
+Infinite carousel.
+
+Large quotation marks.
+
+Client avatar.
+
+Business logo.
+
+Rating.
+
+Auto-scroll.
+
+Pause on hover.
+
+Glass cards.
+
+---
+
+# 22. FAQ
+
+Animated accordion.
+
+Icon rotation.
+
+Smooth height transition.
+
+Keyboard accessible.
+
+Minimal styling.
+
+---
+
+# 23. Contact Section
+
+Split layout.
+
+Left:
+
+Headline
+
+Description
+
+Benefits
+
+Right:
+
+Glass form
+
+Animated inputs
+
+Floating labels
+
+Validation animation
+
+Success animation
+
+Background glow.
+
+---
+
+# 24. Footer
+
+Minimal.
+
+Dark.
+
+Large logo.
+
+Three-column layout.
+
+Newsletter placeholder.
+
+Social icons.
+
+Back-to-top button.
+
+Gradient divider.
+
+---
+
+# 25. Responsive Design
+
+Desktop
+
+Ultra-wide optimized.
+
+Tablet
+
+Content stacked intelligently.
+
+Mobile
+
+Single-column layout.
+
+Touch targets minimum 48px.
+
+No horizontal scrolling.
+
+Every animation adapted for mobile performance.
+
+---
+
+# 26. Accessibility
+
+WCAG AA
+
+Keyboard navigation
+
+Screen readers
+
+Visible focus
+
+High contrast
+
+Reduced motion
+
+Semantic HTML
+
+Accessible forms
+
+ARIA labels
+
+---
+
+# 27. Micro-Interactions
+
+Button press animation
+
+Input focus glow
+
+Card hover lift
+
+Number counters
+
+Loading skeletons
+
+Image fade-in
+
+Link underline animation
+
+Toast notifications
+
+Ripple effects
+
+Icon morphing
+
+Every interaction should provide visual feedback.
+
+---
+
+# 28. Empty States
+
+Illustration
+
+Headline
+
+Supporting text
+
+CTA
+
+Never leave empty space.
+
+---
+
+# 29. Loading Experience
+
+Branded loading screen.
+
+Animated logo.
+
+Gradient pulse.
+
+Progress indicator.
+
+Fade transition.
+
+Maximum display:
+
+2 seconds.
+
+---
+
+# 30. Premium Experience Checklist
+
+✓ Enterprise-quality typography
+
+✓ Luxury spacing system
+
+✓ Dark-first aesthetic
+
+✓ Glassmorphism components
+
+✓ Motion-driven storytelling
+
+✓ Conversion-focused layout
+
+✓ Immersive hero section
+
+✓ Apple-level polish
+
+✓ Stripe-inspired clarity
+
+✓ Linear-inspired minimalism
+
+✓ Framer-quality animations
+
+✓ Vercel-style technical elegance
+
+✓ Pixel-perfect responsiveness
+
+✓ WCAG-compliant accessibility
+
+✓ Lighthouse score above 95
+
+✓ Premium agency presentation
+
+---
+
+# Final UX Principle
+
+A visitor should decide within the first **five seconds** that LaunchForge Digital is a professional, trustworthy, and technically exceptional agency.
+
+Every scroll, animation, interaction, transition, and layout decision must reinforce that perception while progressively guiding the visitor toward a consultation request or project inquiry.
+
+The website should feel less like a brochure and more like a premium software product experience, where elegance, performance, and usability work together to maximize trust and conversion.
