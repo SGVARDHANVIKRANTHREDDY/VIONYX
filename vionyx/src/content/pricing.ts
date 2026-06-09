@@ -1,0 +1,60 @@
+import { PricingContent } from "@/types/content";
+
+export const pricingContent: PricingContent = {
+  label: "Investment",
+  title: "Simple, Value-Driven Pricing Plans",
+  description: "Invest in a digital asset that actively works to capture prospects. Select the baseline package matching your business size.",
+  tiers: [
+    {
+      name: "Starter Site",
+      price: "2,499",
+      period: "one-time",
+      description: "Perfect for new local service businesses wanting a fast, professional digital presence.",
+      popular: false,
+      ctaText: "Choose Starter",
+      features: [
+        { name: "5 Custom Pages", included: true },
+        { name: "Mobile Responsive Layout", included: true },
+        { name: "Basic SEO Setup", included: true },
+        { name: "1 Month Support", included: true },
+        { name: "WhatsApp & Form Integration", included: true },
+        { name: "Bespoke Branding System", included: false },
+        { name: "CMS / Blog Integration", included: false },
+      ],
+    },
+    {
+      name: "Growth Engine",
+      price: "4,499",
+      period: "one-time",
+      description: "Ideal for established clinics, restaurants, and salons needing custom features and workflows.",
+      popular: true,
+      ctaText: "Choose Growth",
+      features: [
+        { name: "10 Custom Pages", included: true },
+        { name: "Mobile Responsive Layout", included: true },
+        { name: "Premium SEO & Schema Markup", included: true },
+        { name: "3 Months Support & Analytics", included: true },
+        { name: "WhatsApp & Form Integration", included: true },
+        { name: "Bespoke Branding System", included: true },
+        { name: "CMS / Blog Integration", included: false },
+      ],
+    },
+    {
+      name: "Elite Enterprise",
+      price: "7,999",
+      period: "one-time",
+      description: "High-tier solution for multi-location agencies, clinics, or custom booking platforms.",
+      popular: false,
+      ctaText: "Contact Us",
+      features: [
+        { name: "Unlimited Pages", included: true },
+        { name: "Mobile Responsive Layout", included: true },
+        { name: "Advanced Local SEO Domination", included: true },
+        { name: "12 Months Dedicated Support", included: true },
+        { name: "Custom Form / API Integrations", included: true },
+        { name: "Bespoke Branding System", included: true },
+        { name: "CMS / Blog Integration", included: true },
+      ],
+    },
+  ],
+};

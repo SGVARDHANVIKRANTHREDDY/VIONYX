@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colors */
+  --color-background: #020617;
+  --color-surface: #0f172a;
+  --color-elevated: #162033;
+  --color-card-bg: rgba(255, 255, 255, 0.03);
+  --color-border-default: rgba(255, 255, 255, 0.08);
+  --color-border-secondary: rgba(255, 255, 255, 0.12);
+
+  --color-primary: #2563eb;
+  --color-secondary: #38bdf8;
+  --color-accent: #60a5fa;
+  --color-highlight: #3b82f6;
+
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #d8e2f1;
+  --color-text-muted: #b3c0d3;
+
+  /* Typography */
+  --font-heading: var(--font-poppins), sans-serif;
+  --font-body: var(--font-inter), sans-serif;
+  --font-mono: var(--font-jetbrains-mono), monospace;
+
+  /* Spacing (8px Base Grid custom scale overrides if needed, Tailwind has good defaults) */
+  --spacing-base: 8px;
+
+  /* Border Radii */
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+
+  /* Animations & Keyframes */
+  --animate-marquee: marquee 30s linear infinite;
+  --animate-shimmer: shimmer 2.5s infinite linear;
+  --animate-spin-slow: spin 8s linear infinite;
+
+  @keyframes marquee {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-50%); }
+  }
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+}
+
+/* Custom Base Styles */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 96px;
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
+  }
+
+  body {
+    font-family: var(--font-body);
+    overflow-x: hidden;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Custom Glassmorphism Utility */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-effect-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-effect-hover:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  transform: translateY(-2px);
+}
