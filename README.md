@@ -1,4 +1,4 @@
-# VIONYX — Premium Agency Web Template
+# VIONYX — Premium Web Agency
 
 VIONYX is a premium digital agency website built with Next.js, TypeScript, Tailwind CSS, and Framer Motion. It is structured as a reusable master template for service businesses such as clinics, law firms, hotels, salons, restaurants, gyms, and similar brands.
 
