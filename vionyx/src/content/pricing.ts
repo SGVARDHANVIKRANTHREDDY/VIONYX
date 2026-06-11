@@ -2,58 +2,85 @@ import { PricingContent } from "@/types/content";
 
 export const pricingContent: PricingContent = {
   label: "Investment",
-  title: "Simple, Value-Driven Pricing Plans",
-  description: "Invest in a digital asset that actively works to capture prospects. Select the baseline package matching your business size.",
+
+  title: "Strategic Digital Solutions Tailored For Your Business",
+
+  description:
+    "Every business has unique goals and requirements. Our solutions combine premium design, enterprise-grade engineering, and modern web technologies to create digital experiences that strengthen brands, engage customers, and drive sustainable business growth.",
+
   tiers: [
     {
-      name: "Starter Site",
-      price: "2,499",
-      period: "one-time",
-      description: "Perfect for new local service businesses wanting a fast, professional digital presence.",
+      name: "Essential",
+
+      price: "3999",
+
+      period: "starting from",
+
+      description:
+        "Perfect for startups and growing businesses looking to establish a professional, high-performance digital presence with a strong foundation for future growth.",
+
       popular: false,
-      ctaText: "Choose Starter",
+
+      ctaText: "Get Started",
+
       features: [
-        { name: "5 Custom Pages", included: true },
-        { name: "Mobile Responsive Layout", included: true },
-        { name: "Basic SEO Setup", included: true },
-        { name: "1 Month Support", included: true },
-        { name: "WhatsApp & Form Integration", included: true },
-        { name: "Bespoke Branding System", included: false },
-        { name: "CMS / Blog Integration", included: false },
+        { name: "Up to 5 Custom Premium Pages", included: true },
+        { name: "Fully Responsive Design", included: true },
+        { name: "Performance & SEO Optimization", included: true },
+        { name: "WhatsApp & Contact Form Integration", included: true },
+        { name: "Analytics Setup", included: true },
+        { name: "Content Management System", included: false },
+        { name: "Custom API Integrations", included: false },
       ],
     },
+
     {
-      name: "Growth Engine",
-      price: "4,499",
-      period: "one-time",
-      description: "Ideal for established clinics, restaurants, and salons needing custom features and workflows.",
+      name: "Professional",
+
+      price: "5999",
+
+      period: "starting from",
+
+      description:
+        "Designed for established businesses seeking advanced functionality, premium branding, and conversion-focused digital experiences that deliver measurable value.",
+
       popular: true,
-      ctaText: "Choose Growth",
+
+      ctaText: "Start Your Project",
+
       features: [
-        { name: "10 Custom Pages", included: true },
-        { name: "Mobile Responsive Layout", included: true },
-        { name: "Premium SEO & Schema Markup", included: true },
-        { name: "3 Months Support & Analytics", included: true },
-        { name: "WhatsApp & Form Integration", included: true },
-        { name: "Bespoke Branding System", included: true },
-        { name: "CMS / Blog Integration", included: false },
+        { name: "Up to 15 Custom Premium Pages", included: true },
+        { name: "Custom UI/UX Design", included: true },
+        { name: "Advanced SEO & Schema Markup", included: true },
+        { name: "CMS Integration", included: true },
+        { name: "Analytics & Performance Reports", included: true },
+        { name: "Third-Party Integrations", included: true },
+        { name: "3 Months Priority Support", included: true },
       ],
     },
+
     {
-      name: "Elite Enterprise",
-      price: "7,999",
-      period: "one-time",
-      description: "High-tier solution for multi-location agencies, clinics, or custom booking platforms.",
+      name: "Enterprise",
+
+      price: "Custom",
+
+      period: "consultation",
+
+      description:
+        "Tailored enterprise solutions for organizations requiring scalable architecture, custom integrations, workflow automation, and long-term digital transformation.",
+
       popular: false,
-      ctaText: "Contact Us",
+
+      ctaText: "Request Proposal",
+
       features: [
-        { name: "Unlimited Pages", included: true },
-        { name: "Mobile Responsive Layout", included: true },
-        { name: "Advanced Local SEO Domination", included: true },
-        { name: "12 Months Dedicated Support", included: true },
-        { name: "Custom Form / API Integrations", included: true },
-        { name: "Bespoke Branding System", included: true },
-        { name: "CMS / Blog Integration", included: true },
+        { name: "Unlimited Custom Pages", included: true },
+        { name: "Enterprise UI/UX Strategy", included: true },
+        { name: "Advanced Performance Optimization", included: true },
+        { name: "Custom API & System Integrations", included: true },
+        { name: "CMS & Dashboard Development", included: true },
+        { name: "Dedicated Technical Consultation", included: true },
+        { name: "Priority Maintenance & Support", included: true },
       ],
     },
   ],
