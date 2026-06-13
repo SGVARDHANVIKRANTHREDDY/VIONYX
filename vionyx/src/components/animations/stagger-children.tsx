@@ -16,7 +16,7 @@ export function StaggerChildren({ children, staggerDelay = 0.08, className }: St
     <div className={className}>
       {childrenArray.map((child, index) => {
         if (React.isValidElement(child)) {
-          const childType = child.type as any;
+          const childType = child.type as { name?: string };
           
           // Check if the child is one of our animation components
           const isAnimationComponent = 

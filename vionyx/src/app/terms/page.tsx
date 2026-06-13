@@ -41,14 +41,14 @@ export default function TermsPage() {
                 2. Use License
               </Heading>
               <p>
-                Permission is granted to temporarily download one copy of the materials (information or software) on VIONYX's website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:
+                Permission is granted to temporarily download one copy of the materials (information or software) on VIONYX&apos;s website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:
               </p>
               <ul className="list-disc list-inside pl-4 space-y-2 text-text-muted">
                 <li>Modify or copy the materials;</li>
                 <li>Use the materials for any commercial purpose, or for any public display (commercial or non-commercial);</li>
-                <li>Attempt to decompile or reverse engineer any software contained on VIONYX's website;</li>
+                <li>Attempt to decompile or reverse engineer any software contained on VIONYX&apos;s website;</li>
                 <li>Remove any copyright or other proprietary notations from the materials; or</li>
-                <li>Transfer the materials to another person or "mirror" the materials on any other server.</li>
+                <li>Transfer the materials to another person or &quot;mirror&quot; the materials on any other server.</li>
               </ul>
             </section>
 
@@ -66,7 +66,7 @@ export default function TermsPage() {
                 4. Disclaimer
               </Heading>
               <p>
-                The materials on VIONYX's website are provided on an 'as is' basis. VIONYX makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.
+                The materials on VIONYX&apos;s website are provided on an &apos;as is&apos; basis. VIONYX makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.
               </p>
             </section>
 
@@ -75,7 +75,7 @@ export default function TermsPage() {
                 5. Limitations of Liability
               </Heading>
               <p>
-                In no event shall VIONYX or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on VIONYX's website, even if VIONYX or a VIONYX authorized representative has been notified orally or in writing of the possibility of such damage.
+                In no event shall VIONYX or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on VIONYX&apos;s website, even if VIONYX or a VIONYX authorized representative has been notified orally or in writing of the possibility of such damage.
               </p>
             </section>
 

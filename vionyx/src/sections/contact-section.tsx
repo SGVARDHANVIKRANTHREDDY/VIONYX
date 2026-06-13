@@ -253,7 +253,7 @@ export function ContactSection() {
                   className="w-full flex items-center justify-center gap-2"
                   onClick={goNext}
                 >
-                  <span>Let's Begin</span>
+                  <span>Let&apos;s Begin</span>
                   <ArrowRight className="w-5 h-5" aria-hidden="true" />
                 </Button>
                 <p className="text-xs text-text-muted">Takes about 2 minutes. No commitment required.</p>
@@ -361,7 +361,7 @@ export function ContactSection() {
                   <div className="space-y-1">
                     <div className="flex items-center gap-2">
                       <Clock className="w-5 h-5 text-secondary" aria-hidden="true" />
-                      <h3 className="text-xl font-bold tracking-tight">What's your timeline?</h3>
+                      <h3 className="text-xl font-bold tracking-tight">What&apos;s your timeline?</h3>
                     </div>
                     <p className="text-text-muted text-sm">When do you need this project completed?</p>
                   </div>
@@ -538,7 +538,7 @@ export function ContactSection() {
                 </motion.div>
 
                 <div className="space-y-3">
-                  <h3 className="text-2xl font-bold tracking-tight">We've received your inquiry!</h3>
+                  <h3 className="text-2xl font-bold tracking-tight">We&apos;ve received your inquiry!</h3>
                   <p className="text-text-secondary text-base leading-relaxed max-w-sm mx-auto">
                     Our team will review your requirements and reach out within <strong className="text-white">one business day</strong>.
                   </p>
