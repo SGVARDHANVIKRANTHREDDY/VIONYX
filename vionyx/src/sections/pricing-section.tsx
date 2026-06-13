@@ -43,7 +43,7 @@ export function PricingSection() {
                     {tier.name}
                   </span>
                   <div className="flex items-baseline gap-2">
-                    <span className="text-4xl md:text-5xl font-black text-white">{tier.price}</span>
+                    <span className="text-4xl md:text-5xl font-black text-text-primary">{tier.price}</span>
                     <span className="text-sm text-text-muted">/ {tier.period}</span>
                   </div>
                   <p className="text-sm text-text-secondary leading-relaxed pt-2">

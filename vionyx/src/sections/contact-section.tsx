@@ -93,8 +93,8 @@ function OptionCard({ selected, onClick, icon, label }: OptionCardProps) {
       onClick={onClick}
       className={`w-full flex items-center gap-3 px-5 py-3.5 rounded-md border text-left text-sm font-medium transition-all duration-200 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary/50
         ${selected
-          ? "border-primary bg-primary/10 text-white shadow-md shadow-primary/10"
-          : "border-white/10 bg-surface/60 text-text-secondary hover:border-white/25 hover:text-white"
+          ? "border-primary bg-primary/10 text-primary shadow-md shadow-primary/5 font-bold"
+          : "border-border-default bg-surface text-text-secondary hover:border-border-secondary hover:text-text-primary"
         }`}
     >
       {icon && (
@@ -540,7 +540,7 @@ export function ContactSection() {
                 <div className="space-y-3">
                   <h3 className="text-2xl font-bold tracking-tight">We&apos;ve received your inquiry!</h3>
                   <p className="text-text-secondary text-base leading-relaxed max-w-sm mx-auto">
-                    Our team will review your requirements and reach out within <strong className="text-white">one business day</strong>.
+                    Our team will review your requirements and reach out within <strong className="text-text-primary">one business day</strong>.
                   </p>
                 </div>
 

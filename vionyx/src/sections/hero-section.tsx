@@ -64,13 +64,13 @@ export function HeroSection() {
                 />
               </div>
               <div className="absolute bottom-6 left-6 right-6 grid grid-cols-2 gap-3 text-left">
-                <div className="rounded-2xl border border-white/10 bg-surface/80 px-4 py-3 backdrop-blur-md">
+                <div className="rounded-2xl border border-black/[0.06] bg-surface/90 px-4 py-3 backdrop-blur-md">
                   <div className="text-xs uppercase tracking-[0.2em] text-text-muted">LCP Focus</div>
-                  <div className="mt-1 text-sm font-semibold text-white">Optimized hero media</div>
+                  <div className="mt-1 text-sm font-semibold text-text-primary">Optimized hero media</div>
                 </div>
-                <div className="rounded-2xl border border-white/10 bg-surface/80 px-4 py-3 backdrop-blur-md">
+                <div className="rounded-2xl border border-black/[0.06] bg-surface/90 px-4 py-3 backdrop-blur-md">
                   <div className="text-xs uppercase tracking-[0.2em] text-text-muted">Loading</div>
-                  <div className="mt-1 text-sm font-semibold text-white">Priority preload</div>
+                  <div className="mt-1 text-sm font-semibold text-text-primary">Priority preload</div>
                 </div>
               </div>
             </div>
