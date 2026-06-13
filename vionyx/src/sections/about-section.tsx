@@ -4,6 +4,7 @@ import { SectionTemplate } from "@/components/sections/section-template";
 import { Card } from "@/components/ui/card";
 import { Heading } from "@/components/ui/heading";
 import { StaggerChildren } from "@/components/animations";
+import { Counter } from "@/components/ui/counter";
 
 export function AboutSection() {
   return (
@@ -33,7 +34,7 @@ export function AboutSection() {
             {aboutContent.stats.map((stat) => (
               <Card key={stat.label} className="p-6 flex flex-col justify-center text-center space-y-2">
                 <span className="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
-                  {stat.value}
+                  <Counter value={stat.value} />
                   {stat.suffix}
                 </span>
                 <span className="text-xs md:text-sm text-text-muted font-medium uppercase tracking-wider">

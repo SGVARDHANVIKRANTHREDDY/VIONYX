@@ -1,25 +1,43 @@
 import { FAQContent } from "@/types/content";
 
 export const faqContent: FAQContent = {
-  label: "Common Questions",
-  title: "Frequently Asked Questions",
-  description: "Have questions about our pricing, timelines, or development approach? Find quick answers below.",
+  label: "Frequently Asked Questions",
+
+  title: "Answers To The Questions That Matter Most",
+
+  description:
+    "We believe in transparency at every stage of the project. Explore answers to some of the most common questions about our design process, development approach, timelines, and long-term support.",
+
   items: [
     {
-      question: "How long does a premium website project take?",
-      answer: "Standard projects launch within 3 to 5 weeks. This covers strategic auditing, prototyping design, engineering development, and final SEO setups.",
+      question: "What is VIONYX's core development technology stack?",
+      answer:
+        "We build premium, high-performance frontends using Next.js 16, React 19, and TypeScript. For styling, we use Vanilla Tailwind CSS. For animations and micro-interactions, we leverage Framer Motion. This guarantees ultra-fast load times, solid SEO indexing, and clean, modular code that is easily maintainable.",
     },
     {
-      question: "Will I be able to edit my own website content?",
-      answer: "Yes, our designs are config-driven. We structure the business details in centralized modules, allowing for easy updates or client handovers.",
+      question: "What does your project billing structure look like?",
+      answer:
+        "We work on a clear, milestone-based billing model. Standard projects require a 50% deposit to initiate design, 25% upon design approval before development starts, and the remaining 25% upon final testing approval and deployment. For ongoing development work, we also offer custom monthly retainers.",
     },
     {
-      question: "Do you offer web hosting and ongoing updates?",
-      answer: "Absolutely. We set up fast hosting on Vercel or AWS, configure domain routing, and offer ongoing support agreements for feature extensions.",
+      question: "How does the code and intellectual property (IP) handoff work?",
+      answer:
+        "Upon project completion and final milestone payment, 100% intellectual property rights, design assets (Figma files), and the codebase (GitHub repository access) are transferred directly to you. We provide a full handover package, including deployment documentation.",
     },
     {
-      question: "Can you build custom booking and payment portals?",
-      answer: "Yes, our platforms integrate cleanly with popular booking engines, Calendly scheduling setups, and Stripe payment checkouts.",
+      question: "Will my website be optimized for mobile and search engines?",
+      answer:
+        "Yes, absolutely. Every experience is custom-coded to pass Google's Core Web Vitals, implement semantic HTML structure, include schema markup (JSON-LD), and conform to accessibility guidelines. We focus heavily on loading speed to boost SEO positioning and lead conversions.",
+    },
+    {
+      question: "Do you offer post-launch support and maintenance?",
+      answer:
+        "Yes. Every launch includes one month of complimentary post-deployment support for bug fixes, performance monitoring, and configuration adjustments. We also offer monthly maintenance retainers for secure updates, features, and backups.",
+    },
+    {
+      question: "Can you integrate third-party services and APIs?",
+      answer:
+        "Certainly. We build integrations with CRMs (HubSpot, Salesforce), email marketing systems (Mailchimp, Klaviyo), booking tools (Calendly), analytics platforms, database layers, and bespoke REST/GraphQL APIs to connect your website directly to your business workflow.",
     },
   ],
 };

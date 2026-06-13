@@ -9,7 +9,7 @@ import { FadeIn, SlideUp } from "@/components/animations";
 
 export function HeroSection() {
   return (
-    <section id="hero" className="relative min-h-screen flex items-center pt-28 pb-16 overflow-hidden">
+    <section id="hero" className="relative min-h-screen flex items-center pt-28 pb-16 overflow-hidden scroll-mt-28">
       {/* Decorative center ambient glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/10 rounded-full blur-[120px] pointer-events-none z-0" />
       

@@ -15,7 +15,7 @@ export function SectionWrapper({
     <section
       id={id}
       className={cn(
-        "py-16 md:py-24 lg:py-32 w-full relative overflow-hidden",
+        "py-16 md:py-24 lg:py-32 w-full relative overflow-hidden scroll-mt-24",
         className
       )}
       {...props}

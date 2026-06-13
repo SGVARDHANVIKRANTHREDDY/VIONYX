@@ -1,87 +1,149 @@
 import { PortfolioContent } from "@/types/content";
 
 export const portfolioContent: PortfolioContent = {
-  label: "Our Work",
-  title: "Flagship Digital Assets We've Built",
-  description: "Explore the live platforms we've launched. Each website is custom-crafted to solve specific industry goals.",
+  label: "Selected Work",
+
+  title: "Where Strategy, Design & Engineering Create Business Impact",
+
+  description:
+    "Every digital experience we craft begins with understanding the client's vision, industry, and growth objectives. Our solutions combine premium design, scalable engineering, performance optimization, and user-centric experiences to help businesses establish authority, strengthen customer trust, and accelerate long-term growth.",
+
   items: [
     {
-      title: "Luxe Dining",
-      category: "Restaurant",
+      title: "Luxury Hospitality Experience",
+
+      category: "Hospitality & Restaurants",
+
       image: "/images/portfolio/placeholder.svg",
-      imageAlt: "Dashboard preview for Luxe Dining reservation and menu platform",
-      tags: ["Design System", "Online Reservations", "Menu Catalog"],
-      link: "https://example.com/case-study/luxe-dining",
-      description: "A premium digital menu and booking engine for upscale culinary establishments.",
-      techStack: ["Next.js", "Framer Motion", "Tailwind CSS"],
-      goals: "Increase direct reservations by 30% and reduce dependence on third-party food portals.",
-      features: ["Interactive 3D Menu", "Real-time Booking", "Instant WhatsApp Table Reservation Confirmation"],
-      outcomes: ["+42% direct reservations in 8 weeks", "-27% third-party commission dependence", "1.9x mobile conversion rate"],
+
+      imageAlt:
+        "Premium restaurant website showcasing immersive dining experiences and reservation platform",
+
+      tags: [
+        "Brand Strategy",
+        "Performance",
+        "Reservation Platform",
+      ],
+
+      link: "#",
+
+      description:
+        "A premium digital platform designed to transform the online presence of luxury restaurants through immersive storytelling, seamless reservations, and exceptional user experiences.",
+
+      techStack: [
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Framer Motion",
+      ],
+
+      goals:
+        "Strengthen brand positioning, increase direct customer engagement, and deliver a frictionless reservation experience across every device.",
+
+      features: [
+        "Interactive Reservation Experience",
+        "Premium Visual Storytelling",
+        "Mobile-First Responsive Design",
+        "SEO & Performance Optimization",
+      ],
+
+      outcomes: [
+        "Enhanced customer engagement",
+        "Premium digital brand perception",
+        "Optimized booking journey",
+        "Scalable future-ready architecture",
+      ],
     },
+
     {
-      title: "Apex Fitness",
-      category: "Fitness & Wellness",
+      title: "Modern Healthcare Platform",
+
+      category: "Healthcare & Medical",
+
       image: "/images/portfolio/placeholder.svg",
-      imageAlt: "Member portal preview for Apex Fitness onboarding and schedule management",
-      tags: ["Membership Portal", "Class Schedules", "Trainer Bios"],
-      link: "https://example.com/case-study/apex-fitness",
-      description: "An interactive membership enrollment portal and schedule manager for local fitness brands.",
-      techStack: ["Next.js", "Framer Motion", "Tailwind CSS"],
-      goals: "Simplify membership sign-ups and optimize local SEO discovery.",
-      features: ["Dynamic Booking Calendar", "Secure Client Portal", "Personal Trainer Profiles & Booking"],
-      outcomes: ["+33% paid membership signups", "-38% support calls for scheduling", "+61% local organic sessions"],
+
+      imageAlt:
+        "Modern healthcare website featuring appointment scheduling and patient services",
+
+      tags: [
+        "Accessibility",
+        "Patient Experience",
+        "Trust Building",
+      ],
+
+      link: "#",
+
+      description:
+        "A professional healthcare platform engineered to improve patient accessibility while reinforcing trust through intuitive design, secure interactions, and streamlined appointment management.",
+
+      techStack: [
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+      ],
+
+      goals:
+        "Deliver a reliable digital experience that simplifies patient journeys and strengthens the healthcare provider's online credibility.",
+
+      features: [
+        "Online Appointment Scheduling",
+        "Doctor & Specialist Profiles",
+        "Comprehensive Service Directory",
+        "Accessibility-First Interface",
+      ],
+
+      outcomes: [
+        "Improved patient experience",
+        "Simplified appointment workflow",
+        "Greater digital accessibility",
+        "Higher brand credibility",
+      ],
     },
+
     {
-      title: "Glow Studio",
-      category: "Beauty & Personal Care",
+      title: "Luxury Real Estate Experience",
+
+      category: "Real Estate & Property",
+
       image: "/images/portfolio/placeholder.svg",
-      imageAlt: "Booking and services preview for Glow Studio salon website",
-      tags: ["Service Menu", "Appointment Integrations", "Reviews Feed"],
-      link: "https://example.com/case-study/glow-studio",
-      description: "A high-fidelity landing page and custom booking system for luxury salons and spas.",
-      techStack: ["Next.js", "Framer Motion", "Tailwind CSS"],
-      goals: "Reduce booking drop-offs and showcase professional stylist credentials.",
-      features: ["Live Appointment Scheduler", "Dynamic Service Rate List", "Automated Reminder Notifications"],
-      outcomes: ["-22% booking abandonment", "+49% appointment completions", "+35% repeat customer sessions"],
-    },
-    {
-      title: "Horizon Stay",
-      category: "Hotel & Lodging",
-      image: "/images/portfolio/placeholder.svg",
-      imageAlt: "Room booking and media gallery preview for Horizon Stay website",
-      tags: ["Booking Engine", "Immersive Media", "Interactive Maps"],
-      link: "https://example.com/case-study/horizon-stay",
-      description: "A luxury reservation system featuring high-definition rooms cataloging.",
-      techStack: ["Next.js", "Framer Motion", "Tailwind CSS"],
-      goals: "Drive direct commission-free stays and highlight local attractions.",
-      features: ["Multi-room Comparison Matrix", "Direct Room Booking Integration", "Interactive Location Guide"],
-      outcomes: ["+29% direct bookings", "-18% cost per booking", "+24% average stay value"],
-    },
-    {
-      title: "SmileCare",
-      category: "Medical & Health",
-      image: "/images/portfolio/placeholder.svg",
-      imageAlt: "Patient intake and consultation preview for SmileCare clinic platform",
-      tags: ["Patient Forms", "Interactive Consultations", "HIPAA Compliant"],
-      link: "https://example.com/case-study/smilecare",
-      description: "A highly accessible clinical information and patient intake portal for modern dental practices.",
-      techStack: ["Next.js", "Framer Motion", "Tailwind CSS"],
-      goals: "Digitize patient onboarding and decrease front-desk phone workload.",
-      features: ["Secure Digital Intake Form", "Interactive Virtual Consultation", "Doctor & Specialist Profiles"],
-      outcomes: ["-31% front-desk call volume", "+44% completed intake forms", "+17% consultation bookings"],
-    },
-    {
-      title: "Elite Estates",
-      category: "Real Estate",
-      image: "/images/portfolio/placeholder.svg",
-      imageAlt: "Property showcase and map search preview for Elite Estates website",
-      tags: ["Property Search", "Interactive Map View", "Agent Contact Form"],
-      link: "https://example.com/case-study/elite-estates",
-      description: "A visual showcase catalog for luxury residential and commercial developments.",
-      techStack: ["Next.js", "Framer Motion", "Tailwind CSS"],
-      goals: "Capture high-value property investor leads and highlight premium architecture features.",
-      features: ["Interactive Map Grid", "Lead Intake & Filtering", "High-Resolution Virtual Tour Showcases"],
-      outcomes: ["+54% qualified lead submissions", "+26% average time on listing pages", "2.1x consultation requests"],
+
+      imageAlt:
+        "Luxury real estate platform featuring premium property showcases and interactive browsing",
+
+      tags: [
+        "Lead Generation",
+        "Property Experience",
+        "Interactive Design",
+      ],
+
+      link: "#",
+
+      description:
+        "A sophisticated real estate platform designed to showcase premium properties through immersive visuals, intelligent navigation, and conversion-focused user experiences.",
+
+      techStack: [
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Framer Motion",
+      ],
+
+      goals:
+        "Create a premium digital destination that generates qualified inquiries while elevating the brand image of modern real estate businesses.",
+
+      features: [
+        "Interactive Property Showcase",
+        "Advanced Search Experience",
+        "High-Performance Image Galleries",
+        "Integrated Lead Capture System",
+      ],
+
+      outcomes: [
+        "Improved visitor engagement",
+        "Higher quality lead generation",
+        "Premium brand positioning",
+        "Future-ready scalable platform",
+      ],
     },
   ],
 };

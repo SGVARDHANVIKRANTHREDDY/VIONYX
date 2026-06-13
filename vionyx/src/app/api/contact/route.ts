@@ -1,15 +1,15 @@
 import { NextRequest, NextResponse } from "next/server";
-import { contactFormSchema } from "@/lib/schemas";
+import { discoveryFormSchema } from "@/lib/schemas";
 import { sendContactEmail } from "@/lib/email";
 
-// In-memory simple rate limiting for production-ready verification
+// In-memory simple rate limiting
 const ipCache = new Map<string, { count: number; lastReset: number }>();
 const RATE_LIMIT_WINDOW = 60 * 1000; // 1 minute
-const MAX_REQUESTS = 3; // Max 3 contact submissions per minute per IP
+const MAX_REQUESTS = 3;
 
 export async function POST(req: NextRequest) {
   try {
-    // 1. Get client IP address for rate limiting
+    // 1. Rate limiting
     const ip = req.headers.get("x-forwarded-for") || req.headers.get("x-real-ip") || "unknown";
     const now = Date.now();
     const clientLimit = ipCache.get(ip);
@@ -30,35 +30,40 @@ export async function POST(req: NextRequest) {
       ipCache.set(ip, { count: 1, lastReset: now });
     }
 
-    // 2. Parse request body
+    // 2. Parse body
     const body = await req.json();
 
-    // 3. Server-side validation using Zod
-    const validation = contactFormSchema.safeParse(body);
+    // 3. Zod validation against the discovery form schema
+    const validation = discoveryFormSchema.safeParse(body);
     if (!validation.success) {
       const errorMap = validation.error.flatten().fieldErrors;
       return NextResponse.json({ success: false, errors: errorMap }, { status: 400 });
     }
 
-    const { name, email, phone, company, message, honeypot } = validation.data;
+    const { name, email, company, website, message, service, budget, timeline, honeypot } = validation.data;
 
-    // 4. Honeypot check (Spam Protection)
+    // 4. Honeypot anti-spam check
     if (honeypot && honeypot.trim() !== "") {
-      // Silently return success to mislead spambot
       return NextResponse.json({ success: true, message: "Inquiry received successfully." });
     }
 
-    // 5. Input sanitization (Simple HTML stripping to prevent XSS)
+    // 5. Input sanitization
     const sanitize = (text: string) => text.replace(/<[^>]*>/g, "");
     const sanitizedData = {
       name: sanitize(name),
       email: sanitize(email),
-      phone: phone ? sanitize(phone) : undefined,
       company: company ? sanitize(company) : undefined,
-      message: sanitize(message),
+      website: website ? sanitize(website) : undefined,
+      message: [
+        `Service: ${service}`,
+        `Budget: ${budget}`,
+        `Timeline: ${timeline}`,
+        "",
+        sanitize(message),
+      ].join("\n"),
     };
 
-    // 6. Send email via Resend / Console Simulation
+    // 6. Send email
     const emailResponse = await sendContactEmail(sanitizedData);
 
     if (!emailResponse.success) {
@@ -70,7 +75,7 @@ export async function POST(req: NextRequest) {
 
     return NextResponse.json({
       success: true,
-      message: "Your message has been sent successfully!",
+      message: "Your project inquiry has been received! We'll be in touch within one business day.",
     });
   } catch (err: unknown) {
     console.error("[Contact API] Server Error:", err);

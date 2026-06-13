@@ -37,11 +37,11 @@ export default function Error({
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Button variant="primary" onClick={() => reset()} className="w-full sm:w-auto flex items-center justify-center gap-2">
-            <RefreshCw className="w-4 h-4" />
+            <RefreshCw className="w-4 h-4" aria-hidden="true" />
             <span>Try Again</span>
           </Button>
           <Button variant="secondary" href="/" className="w-full sm:w-auto flex items-center justify-center gap-2">
-            <Home className="w-4 h-4" />
+            <Home className="w-4 h-4" aria-hidden="true" />
             <span>Go Back Home</span>
           </Button>
         </div>

@@ -1,29 +1,48 @@
 import { ProcessContent } from "@/types/content";
 
 export const processContent: ProcessContent = {
-  label: "How We Work",
-  title: "A Streamlined Journey From Plan To Launch",
-  description: "We eliminate guessing games. Our structured phase-by-phase framework keeps you fully aligned at every step.",
+  label: "Our Process",
+
+  title: "A Strategic Approach From Vision To Launch",
+
+  description:
+    "Every successful digital experience begins with a clear strategy. Our proven process combines research, design, engineering, and optimization to deliver scalable solutions that align with your business objectives and create lasting value.",
+
   items: [
     {
       step: "01",
+
       title: "Discovery & Strategy",
-      description: "We audit your business, map competitor gaps, and define a clear, target-driven site plan.",
+
+      description:
+        "We begin by understanding your business, audience, competitors, and goals to develop a strategic roadmap that aligns technology with measurable business outcomes.",
     },
+
     {
       step: "02",
-      title: "Interactive Prototyping",
-      description: "We craft custom, high-fidelity UI wireframes to lock down exact layout details before coding.",
+
+      title: "Design & User Experience",
+
+      description:
+        "Our team creates intuitive, high-fidelity interfaces and seamless user journeys that reflect your brand identity while maximizing engagement and conversions.",
     },
+
     {
       step: "03",
-      title: "Bespoke Development",
-      description: "Our engineers build the approved layout using Next.js, optimizing for load speeds and mobile fluid layouts.",
+
+      title: "Engineering & Development",
+
+      description:
+        "Using modern technologies and industry best practices, we build fast, scalable, secure, and responsive digital solutions engineered for long-term growth.",
     },
+
     {
       step: "04",
-      title: "Testing & SEO Tuning",
-      description: "We run rigid page-speed, accessibility, and meta schema audits to ensure optimal launch discoverability.",
+
+      title: "Optimization & Launch",
+
+      description:
+        "Before deployment, every project undergoes comprehensive quality assurance, accessibility validation, SEO optimization, and performance testing to ensure a flawless launch experience.",
     },
   ],
 };

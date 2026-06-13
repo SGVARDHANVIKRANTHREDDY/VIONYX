@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useEffect } from "react";
 import { GridPattern } from "./GridPattern";
 import { GradientOrb } from "./GradientOrb";
 import { NoiseOverlay } from "./NoiseOverlay";
@@ -8,10 +10,30 @@ export interface PageBackgroundProps {
 }
 
 export function PageBackground({ children }: PageBackgroundProps) {
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      document.documentElement.style.setProperty("--mouse-x", `${e.clientX}px`);
+      document.documentElement.style.setProperty("--mouse-y", `${e.clientY}px`);
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, []);
+
   return (
     <div className="relative min-h-screen bg-background text-text-primary overflow-hidden">
       {/* Visual background layers */}
       <NoiseOverlay />
+      
+      {/* Dynamic interactive mouse spotlight */}
+      <div
+        className="pointer-events-none fixed inset-0 z-0 transition-opacity duration-300"
+        style={{
+          background: "radial-gradient(500px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), var(--spotlight-color), transparent 85%)",
+        }}
+      />
       
       {/* Background orbs */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">

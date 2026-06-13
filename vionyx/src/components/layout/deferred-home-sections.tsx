@@ -1,6 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
+import { SectionDivider } from "@/components/layout/SectionDivider";
 
 const PortfolioSection = dynamic(
   () => import("@/sections/portfolio-section").then((module) => module.PortfolioSection),
@@ -27,9 +28,13 @@ export function DeferredHomeSections() {
   return (
     <>
       <PortfolioSection />
+      <SectionDivider />
       <ProcessSection />
+      <SectionDivider />
       <PricingSection />
+      <SectionDivider />
       <TestimonialsSection />
+      <SectionDivider />
       <FAQSection />
     </>
   );

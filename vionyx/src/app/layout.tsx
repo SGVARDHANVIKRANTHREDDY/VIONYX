@@ -11,7 +11,7 @@ const inter = Inter({
 });
 
 const poppins = Poppins({
-  weight: ["800"],
+  weight: ["400", "500", "600", "700", "800", "900"],
   subsets: ["latin"],
   variable: "--font-poppins",
   display: "swap",
@@ -35,7 +35,7 @@ export default function RootLayout({
       <body className="antialiased">
         <a
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:bg-primary focus:text-white focus:px-4 focus:py-2 focus:rounded-sm focus:z-50 focus:font-semibold focus:outline-none focus:ring-2 focus:ring-secondary"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:bg-primary focus:text-background focus:px-4 focus:py-2 focus:rounded-sm focus:z-50 focus:font-semibold focus:outline-none focus:ring-2 focus:ring-secondary"
         >
           Skip to content
         </a>

@@ -132,7 +132,7 @@ export function Navbar() {
             <motion.button
               aria-hidden="true"
               tabIndex={-1}
-              initial={false}
+              initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: reduceMotion ? 0 : 0.2 }}
@@ -148,7 +148,7 @@ export function Navbar() {
               role="dialog"
               aria-modal="true"
               aria-label="Mobile navigation menu"
-              initial={false}
+              initial={{ opacity: 0, y: -16 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -16 }}
               transition={{ duration: reduceMotion ? 0 : 0.2 }}

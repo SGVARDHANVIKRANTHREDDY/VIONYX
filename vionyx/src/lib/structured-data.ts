@@ -1,8 +1,8 @@
 import { businessConfig } from "@/config/business";
 
+const siteUrl = businessConfig.siteUrl;
+
 export function getLocalBusinessSchema() {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://vionyx.in";
-  
   return {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
@@ -21,7 +21,7 @@ export function getLocalBusinessSchema() {
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": 19.0760, // Default coordinates for Mumbai
+      "latitude": 19.0760,
       "longitude": 72.8777
     },
     "openingHoursSpecification": {
@@ -47,14 +47,20 @@ export function getLocalBusinessSchema() {
 }
 
 export function getOrganizationSchema() {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://vionyx.in";
-
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": businessConfig.name,
+    "description": businessConfig.tagline,
     "url": siteUrl,
     "logo": `${siteUrl}/logo.png`,
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": businessConfig.phone,
+      "contactType": "customer service",
+      "areaServed": ["IN", "US"],
+      "availableLanguage": ["en", "hi"]
+    },
     "sameAs": [
       businessConfig.socials.twitter,
       businessConfig.socials.linkedin,
@@ -65,8 +71,6 @@ export function getOrganizationSchema() {
 }
 
 export function getWebsiteSchema() {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://vionyx.in";
-
   return {
     "@context": "https://schema.org",
     "@type": "WebSite",
@@ -81,8 +85,6 @@ export function getWebsiteSchema() {
 }
 
 export function getBreadcrumbSchema() {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://vionyx.in";
-
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -96,6 +98,18 @@ export function getBreadcrumbSchema() {
       {
         "@type": "ListItem",
         "position": 2,
+        "name": "Privacy Policy",
+        "item": `${siteUrl}/privacy`
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Terms of Service",
+        "item": `${siteUrl}/terms`
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
         "name": "Contact",
         "item": `${siteUrl}/#contact`
       }

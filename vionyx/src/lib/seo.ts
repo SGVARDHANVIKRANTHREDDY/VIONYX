@@ -16,7 +16,7 @@ export function constructMetadata({
   ogImage = "/images/og-image.webp",
   noIndex = false,
 }: SEOConfigProps): Metadata {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://vionyx.in";
+  const siteUrl = businessConfig.siteUrl;
   const fullUrl = `${siteUrl}${path.startsWith("/") ? path : `/${path}`}`;
 
   return {

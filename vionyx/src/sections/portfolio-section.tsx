@@ -39,7 +39,7 @@ export function PortfolioSection() {
               aria-pressed={selectedCategory === category}
               className={`px-4 py-2 rounded-full text-xs md:text-sm font-semibold transition-all duration-300 ${
                 selectedCategory === category
-                  ? "bg-primary text-white shadow-lg shadow-primary/20 scale-105"
+                  ? "bg-primary text-background font-bold shadow-lg shadow-primary/20 scale-105"
                   : "bg-surface text-text-secondary hover:text-text-primary hover:bg-elevated border border-white/10"
               }`}
             >
@@ -93,7 +93,7 @@ export function PortfolioSection() {
                   {/* Goal and Key Features details */}
                   <div className="space-y-3 pt-3 border-t border-white/5 text-xs text-text-muted flex-grow">
                     <div className="flex gap-2 items-start">
-                      <Target className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                      <Target className="w-4 h-4 text-primary shrink-0 mt-0.5" aria-hidden="true" />
                       <div>
                         <span className="font-semibold text-text-secondary block">Business Objective:</span>
                         <span>{project.goals}</span>
@@ -101,7 +101,7 @@ export function PortfolioSection() {
                     </div>
                     
                     <div className="flex gap-2 items-start">
-                      <Sparkles className="w-4 h-4 text-secondary shrink-0 mt-0.5" />
+                      <Sparkles className="w-4 h-4 text-secondary shrink-0 mt-0.5" aria-hidden="true" />
                       <div>
                         <span className="font-semibold text-text-secondary block">Core Features:</span>
                         <ul className="list-disc pl-4 space-y-0.5">
@@ -113,7 +113,7 @@ export function PortfolioSection() {
                     </div>
 
                     <div className="flex gap-2 items-start">
-                      <TrendingUp className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                      <TrendingUp className="w-4 h-4 text-primary shrink-0 mt-0.5" aria-hidden="true" />
                       <div>
                         <span className="font-semibold text-text-secondary block">Measured Outcomes:</span>
                         <ul className="list-disc pl-4 space-y-0.5">
@@ -125,7 +125,7 @@ export function PortfolioSection() {
                     </div>
 
                     <div className="flex gap-2 items-start">
-                      <Cpu className="w-4 h-4 text-text-muted shrink-0 mt-0.5" />
+                      <Cpu className="w-4 h-4 text-text-muted shrink-0 mt-0.5" aria-hidden="true" />
                       <div>
                         <span className="font-semibold text-text-secondary block">Technology Stack:</span>
                         <div className="flex flex-wrap gap-1 mt-1">
@@ -149,7 +149,7 @@ export function PortfolioSection() {
                       rel="noopener noreferrer"
                     >
                       <span>Explore Live Platform</span>
-                      <ExternalLink className="w-3.5 h-3.5 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform duration-300" />
+                      <ExternalLink className="w-3.5 h-3.5 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform duration-300" aria-hidden="true" />
                     </Button>
                   </div>
                 </div>

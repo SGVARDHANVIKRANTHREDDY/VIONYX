@@ -20,7 +20,7 @@ export type ButtonProps = ButtonAsButtonProps | ButtonAsLinkProps;
 
 export const Button = React.forwardRef<HTMLButtonElement & HTMLAnchorElement, ButtonProps>(
   ({ className, variant = "primary", size = "md", loading = false, href, icon, children, ...props }, ref) => {
-    const baseClass = "inline-flex items-center justify-center font-medium rounded-md transition-all duration-300 focus:outline-none focus:ring-3 focus:ring-secondary/40 disabled:opacity-50 disabled:pointer-events-none cursor-pointer";
+    const baseClass = "inline-flex items-center justify-center font-medium rounded-md transition-all duration-300 focus:outline-none focus-visible:ring-3 focus-visible:ring-secondary/40 disabled:opacity-50 disabled:pointer-events-none cursor-pointer";
     
     const sizeClasses = {
       sm: "px-4 py-2 text-sm",
@@ -29,7 +29,7 @@ export const Button = React.forwardRef<HTMLButtonElement & HTMLAnchorElement, Bu
     };
 
     const variantClasses = {
-      primary: "bg-primary text-white hover:bg-primary/95 shadow-md shadow-primary/20 border border-primary/20",
+      primary: "bg-primary text-white font-semibold hover:bg-primary/95 shadow-md shadow-primary/20 border border-primary/20",
       secondary: "bg-surface text-text-primary border border-border-default hover:bg-elevated hover:border-border-secondary",
       ghost: "text-text-secondary hover:text-white hover:bg-white/5",
       danger: "bg-red-600 text-white hover:bg-red-700",

@@ -1,10 +1,16 @@
 import { HeroContent } from "@/types/content";
 
 export const heroContent: HeroContent = {
-  titlePrefix: "Next-Gen Web Standards",
-  titleRegular: "We build premium websites for ",
-  titleGradient: "ambitious local businesses.",
-  description: "VIONYX merges high-end bespoke aesthetic design with production-grade engineering to build reliable, fast, and high-converting websites that make your brand immediately stand out.",
-  primaryCtaText: "Book a Free Consultation",
-  secondaryCtaText: "Explore Portfolio",
+  titlePrefix: "Enterprise-Grade Digital Experiences",
+
+  titleRegular: "We engineer premium websites that ",
+
+  titleGradient: "elevate brands and accelerate growth.",
+
+  description:
+    "VIONYX is a premium digital agency specializing in high-performance websites and modern web applications. We combine exceptional design, scalable engineering, SEO excellence, and conversion-driven strategy to create digital experiences that inspire trust, strengthen brands, and deliver measurable business results.",
+
+  primaryCtaText: "Start Your Project",
+
+  secondaryCtaText: "View Our Work",
 };

@@ -2,6 +2,7 @@ import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { ScrollProgress } from "@/components/layout/scroll-progress";
 import { WhatsAppFAB } from "@/components/layout/whatsapp-fab";
+import { SectionDivider } from "@/components/layout/SectionDivider";
 
 // Phase 2 Sections
 import { HeroSection } from "@/sections/hero-section";
@@ -50,12 +51,19 @@ export default function Home() {
       {/* Main Section Content Wrapper */}
       <main id="main-content" tabIndex={-1} className="flex flex-col w-full outline-none">
         <HeroSection />
+        <SectionDivider />
         <TrustBar />
+        <SectionDivider />
         <AboutSection />
+        <SectionDivider />
         <ServicesSection />
+        <SectionDivider />
         <IndustriesSection />
+        <SectionDivider />
         <DeferredHomeSections />
+        <SectionDivider />
         <CTASection />
+        <SectionDivider />
         <ContactSection />
       </main>
 

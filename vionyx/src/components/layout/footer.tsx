@@ -75,8 +75,19 @@ export function Footer() {
       </Container>
 
       {/* Bottom Copyright */}
-      <Container className="pt-8 mt-8 border-t border-border-default/50 text-center md:flex md:justify-between md:text-left text-sm text-text-muted">
+      <Container className="pt-8 mt-8 border-t border-border-default/50 text-center md:flex md:justify-between md:items-center md:text-left text-sm text-text-muted">
         <p>© {currentYear} {businessConfig.name}. All rights reserved.</p>
+        
+        <div className="flex gap-4 justify-center my-3 md:my-0">
+          <Link href="/privacy" className="hover:text-white transition-colors duration-200">
+            Privacy Policy
+          </Link>
+          <span>•</span>
+          <Link href="/terms" className="hover:text-white transition-colors duration-200">
+            Terms of Service
+          </Link>
+        </div>
+
         <p className="mt-2 md:mt-0">
           Crafted with precision for premium local businesses.
         </p>

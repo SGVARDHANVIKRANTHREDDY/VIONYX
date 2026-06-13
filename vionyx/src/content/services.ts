@@ -2,38 +2,65 @@ import { ServicesContent } from "@/types/content";
 
 export const servicesContent: ServicesContent = {
   label: "Our Services",
-  title: "Tailored Web Solutions Built to Perform",
-  description: "We cover the entire digital lifecycle from concept design to high-speed development and search engine domination.",
+
+  title: "Comprehensive Digital Solutions Built For Growth",
+
+  description:
+    "We combine strategic thinking, premium design, and enterprise-grade engineering to create digital experiences that strengthen brands, engage audiences, and drive measurable business results.",
+
   items: [
     {
       icon: "Globe",
-      title: "Bespoke Web Design",
-      description: "Visual identity custom-built from scratch. No cookie-cutter layouts or boring generic templates.",
+
+      title: "Custom Web Design",
+
+      description:
+        "Beautiful, user-centric interfaces crafted exclusively for your brand, delivering memorable digital experiences that build trust and differentiate your business.",
     },
+
     {
       icon: "Code",
-      title: "Production-Grade Engineering",
-      description: "Next.js architecture with instant load speeds, optimal code structures, and responsive stability.",
+
+      title: "Modern Web Development",
+
+      description:
+        "High-performance websites and web applications built with modern technologies, scalable architecture, and clean engineering practices for long-term reliability.",
     },
+
     {
       icon: "Smartphone",
-      title: "Mobile Optimization",
-      description: "Fluid, mobile-first design targeting seamless booking and browsing experiences on any screen.",
+
+      title: "Responsive Experience",
+
+      description:
+        "Mobile-first digital experiences optimized for every device, ensuring seamless usability, accessibility, and consistent performance across all screen sizes.",
     },
+
     {
       icon: "Zap",
-      title: "SEO & Growth Engine",
-      description: "Optimized structured schema markups, fast page-speeds, and local search discoverability setup.",
+
+      title: "SEO & Performance Optimization",
+
+      description:
+        "Technical SEO, structured data, lightning-fast performance, and optimization strategies designed to improve visibility, rankings, and organic growth.",
     },
+
     {
       icon: "Sparkles",
-      title: "Premium Copywriting",
-      description: "Compelling brand copy designed to establish authority and turn site visitors into paying leads.",
+
+      title: "Brand Strategy & Content",
+
+      description:
+        "Professional messaging and conversion-focused content that communicate your value, strengthen brand identity, and inspire customer confidence.",
     },
+
     {
       icon: "ShieldAlert",
-      title: "Maintenance & Support",
-      description: "Active updates, analytics reporting, hosting setup, and continuous domain support.",
+
+      title: "Support & Continuous Growth",
+
+      description:
+        "Ongoing maintenance, security updates, performance monitoring, analytics insights, and technical support to keep your digital platform secure and future-ready.",
     },
   ],
 };
