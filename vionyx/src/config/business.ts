@@ -2,14 +2,14 @@ export const businessConfig = {
   name: "VIONYX",
   tagline: "Premium Digital Experiences for Growing Businesses",
   siteUrl: process.env.NEXT_PUBLIC_SITE_URL ?? "https://vionyx.com",
-  email: "hello@vionyx.in",
+  email: "vionyx.origin@gmailcom",
   phone: "+91-9999999999",
   whatsapp: "+919999999999",
   address: {
     street: "123 Premium Tech Boulevard",
-    city: "Mumbai",
-    state: "Maharashtra",
-    zip: "400001",
+    city: "Tirupati",
+    state: "Andhra Pradesh",
+    zip: "517501",
     country: "India",
   },
   socials: {
