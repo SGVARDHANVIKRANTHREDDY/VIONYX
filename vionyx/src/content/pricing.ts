@@ -12,7 +12,7 @@ export const pricingContent: PricingContent = {
     {
       name: "Essential",
 
-      price: "$3,999",
+      price: "4,999",
 
       period: "starting from",
 
@@ -37,7 +37,7 @@ export const pricingContent: PricingContent = {
     {
       name: "Professional",
 
-      price: "$5,999",
+      price: "9,999",
 
       period: "starting from",
 

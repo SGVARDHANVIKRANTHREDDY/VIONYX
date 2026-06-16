@@ -15,11 +15,11 @@ export const contactContent: ContactContent = {
   quickActions: [
     {
       label: "Chat on WhatsApp",
-      href: "https://wa.me/919999999999",
+      href: "https://wa.me/9440241457",
     },
     {
       label: "Schedule a Consultation",
-      href: "tel:+91-9999999999",
+      href: "tel:+91-9440241457",
     },
   ],
 };
